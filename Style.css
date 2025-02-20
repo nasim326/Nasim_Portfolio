@@ -3,7 +3,7 @@
             margin: 0;
             font-family: Bwnistagrot bk, sans-serif;
 		background-color: Black;
-		background-image: url(b_pic.jpg);
+		background-image: url(images/b_pic.jpg);
         }
         .navbar {
             position: fixed;
