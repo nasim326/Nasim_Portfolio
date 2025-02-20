@@ -1,0 +1,140 @@
+
+       body {
+            margin: 0;
+            font-family: Bwnistagrot bk, sans-serif;
+		background-color: Black;
+		background-image: url(b_pic.jpg);
+        }
+        .navbar {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background: #0092a;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 10px;
+            transition: background 0.3s;
+        }
+        
+/* Basic styling for the logo */
+.logo {
+  display: inline-block;
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  white-space: nowrap; /* Prevent the text from breaking into multiple lines */
+}
+
+/* Initially, hide the full name */
+.logo .full-name {
+  visibility: hidden;
+  opacity: 0; /* Make the full name invisible */
+  position: absolute;
+  left: 0;
+  top: 100%;
+  transition: opacity 0.3s ease, visibility 0.3s ease, top 0.3s ease; /* Smooth transition */
+}
+
+/* Styling for the first letters of each word */
+.logo .first-letter {
+  display: inline-block;
+  font-size: 30px;
+  color: #4CAF50; /* Color of initials */
+  margin-right: 4px; /* Space between letters */
+  transition: font-size 0.3s ease; /* Smooth transition for font size */
+}
+
+/* On hover, show the full name and animate the first letters */
+.logo:hover .first-letter {
+  font-size: 20px; /* Shrink the first letters when hovered */
+}
+
+.logo:hover .full-name {
+  visibility: visible;
+  opacity: 1; /* Make the full name visible */
+  top: 100%; /* Position the full name just below the initials */
+}
+
+
+       
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+        .nav-links li {
+            margin: 0 15px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: White;
+            font-size: 1em;
+            transition: color 0.3s;
+        }
+        .nav-links a.active {
+            color: Black;
+            border-bottom: 2px solid Black;
+        }
+        .section {
+            padding: 100px;
+            min-height: 100vh;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+        }
+
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+     
+        .home-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px;
+        }
+        .text-content {
+            width: 50%;
+        }
+        .text-content h1, .text-content h2, .text-content h3 {
+            margin-bottom: 10px;
+	font-family: Bwnistagrot bk, sans-serif;
+    font-size: 38px;
+    font-weight: 900;
+    line-height: 125%
+        }
+
+
+
+        .dynamic-text {
+            font-style: italic;
+            color: White;
+        }
+.image-container {
+    width: 300px;
+	height: 300px;
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hover-glow {
+    width: 300px; /* Adjust the size as needed */
+    height: 300px; /* Ensure it is square for a perfect circle */
+    border-radius: 50%; /* This rounds the image to a circle */
+    object-fit: cover; /* Ensures the image fills the circle without distorting */
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* initial shadow */
+}
+
+/* Hover effect */
+.hover-glow:hover {
+    box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.8); /* glowing White */
+    transform: scale(1.1); /* Slight zoom effect */
+}
