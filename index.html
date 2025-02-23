@@ -4,16 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="Style.css">
-    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/script.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  lucide.createIcons();
+</script>
 </head>
 <body>
     <header class="navbar">
      
 <div class="logo">
-  <span class="first-letter">N</span>
-  <span class="first-letter">S</span>
-  <span class="full-name">Nasim Sarwar</span>
+  <span class="name nasim">Nasim</span>
+  <span class="name sarwar">Sarwar</span>
 </div>
 
 
@@ -28,19 +33,55 @@
             </ul>
         </nav>
     </header>
+ 
     <div>
-    <section id="home" class="home-section">
+  <section id="home" class="home-section">
 
+<section id="nasim">
         <div class="text-content">
-            <h1>Welcome to My Website</h1>
-            <h2 class="dynamic-text">Loading...</h2>
-            <h3>Explore the best content here</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tincidunt magna at justo volutpat.</p>
+            <h1><span class="its-text">It's</span> 
+<span class="name-text">Nasim Sarwar</span> </h1>
+             <h2 class="dynamic-text"> <span class="white-text">I am a</span> <span id="changingText" ></span><span class="cursor">.</span></h2>
+          <div class="p-text">
+            <p>I am a freelance website designer, crafting user-friendly, visually appealing websites that enhance your online presence. Reach me at...</p>
+	</div>
         </div>
+<!-- Social Icons added here -->
+
+<div class="social-icons">
+  <a href="https://facebook.com" target="_blank" class="social-btn facebook">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+  <a href="https://linkedin.com" target="_blank" class="social-btn linkedin">
+    <i class="fab fa-linkedin-in"></i>
+  </a>
+  <a href="https://instagram.com" target="_blank" class="social-btn instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://twitter.com" target="_blank" class="social-btn twitter">
+    <i class="fab fa-twitter"></i>
+  </a>
+</div>
+<!-- "Get in touch" Button -->
+      <div class="get-in-touch">
+        <a href="#contact" class="get-in-touch-btn">Get in touch</a>
+      </div>
+
+      
+</section>
         <div class="image-container">
             <img src="images/Profile.jpg" alt="Profile Picture" class="hover-glow">
         </div>
+
+
     </section>
+<!-- Scroll down Navigation -->
+      <div class="scroll-down">
+        <p class="scroll-text">Scroll to explore</p>
+        <div class="scroll-dot">
+          <span class="dot"></span>
+        </div>
+      </div>
 </div>
     <section id="about" class="section">About Content</section>
     <section id="services" class="section">Services Content</section>
