@@ -1,10 +1,17 @@
 
-       body {
+    body {
             margin: 0;
-            font-family: Bwnistagrot bk, sans-serif;
-		background-color: Black;
-		background-image: url(images/b_pic.jpg);
-        }
+            font-family: 'Open Sans',sans-serif;
+ background: linear-gradient(90deg,
+       #0b1216 0%,
+        #0e161b 50%,
+        #111A20 100%
+    );
+    min-height: 100vh;  /* ensures the gradient covers the full viewport height */
+
+}
+
+
         .navbar {
             position: fixed;
             width: 100%;
@@ -18,45 +25,36 @@
             transition: background 0.3s;
         }
         
-/* Basic styling for the logo */
+/* Basic Logo Style */
 .logo {
+  font-family: 'Open Sans', sans-serif;
   display: inline-block;
-  position: relative;
-  font-size: 30px;
-  font-weight: bold;
-  color: #333;
-  cursor: pointer;
-  white-space: nowrap; /* Prevent the text from breaking into multiple lines */
+  font-size: 1.5em; /* Adjust as needed */
 }
 
-/* Initially, hide the full name */
-.logo .full-name {
-  visibility: hidden;
-  opacity: 0; /* Make the full name invisible */
-  position: absolute;
-  left: 0;
-  top: 100%;
-  transition: opacity 0.3s ease, visibility 0.3s ease, top 0.3s ease; /* Smooth transition */
+.name {
+  display: inline;
 }
 
-/* Styling for the first letters of each word */
-.logo .first-letter {
-  display: inline-block;
-  font-size: 30px;
-  color: #4CAF50; /* Color of initials */
-  margin-right: 4px; /* Space between letters */
-  transition: font-size 0.3s ease; /* Smooth transition for font size */
+/* "Nasim" Text Style */
+.nasim {
+  color: white;
+  font-family: 'Open Sans', sans-serif; /* Font for Nasim */
 }
 
-/* On hover, show the full name and animate the first letters */
-.logo:hover .first-letter {
-  font-size: 20px; /* Shrink the first letters when hovered */
+/* "Sarwar" Text Style */
+.sarwar {
+  color: #00C1C1;
+  text-shadow: 0 0 20px rgba(0, 193, 193, 0.8),
+               0 0 30px rgba(0, 193, 193, 0.6); /* Glowing effect for Sarwar */
+  font-family: 'Arial', sans-serif; /* Change this to any font you want for Sarwar */
+font-weight: bold;
 }
 
-.logo:hover .full-name {
-  visibility: visible;
-  opacity: 1; /* Make the full name visible */
-  top: 100%; /* Position the full name just below the initials */
+/* Hover Effect (Zoom Out) */
+.logo:hover {
+  transform: scale(1.05);  /* Zoom out effect on hover */
+  transition: transform 0.3s ease;
 }
 
 
@@ -75,9 +73,23 @@
             transition: color 0.3s;
         }
         .nav-links a.active {
-            color: Black;
-            border-bottom: 2px solid Black;
-        }
+  color: #00C1C1;
+  position: relative;
+}
+
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;  /* Adjust to align with text */
+  width: 100%;
+  height: 2px;
+  background: #00C1C1;
+  box-shadow: 0 0 20px 5px rgba(0, 193, 193, 0.8);
+  pointer-events: none;
+}
+
+
         .section {
             padding: 100px;
             min-height: 100vh;
@@ -98,23 +110,97 @@
             align-items: center;
             padding: 50px;
         }
+
+	#nasim {
+	flex-direction: column;
+}
         .text-content {
-            width: 50%;
-        }
+    width: 100%;
+    margin: 0 auto;    
+	text-align: center;
+	
+}
+.p-text {
+width: 80%;
+margin: 0 auto;
+    text-align: center;
+}
+
         .text-content h1, .text-content h2, .text-content h3 {
             margin-bottom: 10px;
-	font-family: Bwnistagrot bk, sans-serif;
-    font-size: 38px;
+	
+    font-size: 46px;
     font-weight: 900;
     line-height: 125%
         }
+	.its-text {
+            
+color: White;        
+}
+        
+	/* Text Style for "Nasim Sarwar" */
+.name-text {
+  color: transparent; /* Make the text color transparent to show the gradient */
+  background-image: linear-gradient(135deg, 
+                                    #1AA5F6, #4F8CFE, #786EFA, #F4B0FC, #F4B0FC); /* RGB colors */
+  background-size: 200% 100%; /* Make the gradient larger than the text */
+  background-position: left center; /* Start the gradient on the left */
+  -webkit-background-clip: text; /* Clip the background to the text */
+  background-clip: text; /* Clip the background to the text */
+  
+  animation: changeColor 4.5s linear infinite; /* Apply animation */
+}
 
+/* Keyframes for the gradient animation */
+@keyframes changeColor {
+  0% {
+    background-position: right center; /* Start gradient on the left */
+  }
+  100% {
+    background-position: left center; /* Move gradient to the right */
+  }
+}
+
+
+/* here some think change */
+
+.text-content h2 {
+font-family: 'Open Sans',sans-serif;
+            font-size: 46px;
+            font-weight: bold;
+		color:#00C1C1;
+		
+        }
 
 
         .dynamic-text {
             font-style: italic;
             color: White;
+display: inline;
         }
+.white-text {
+  color: white; /* Specific color for "I am a" */
+}
+.cursor {
+            display: inline-block;
+            width: 2px;
+            background-color: transparent;
+            animation: blink 0.7s infinite;
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+
+	#changingText {
+		color: #00C1C1; 
+	text-shadow: 0 0 20px rgba(0, 193, 193, 0.8), 
+               0 0 30px rgba(0, 193, 193, 0.6);
+	}
+P {
+color: White;
+}
+
 .image-container {
     width: 300px;
 	height: 300px;
@@ -135,6 +221,173 @@
 
 /* Hover effect */
 .hover-glow:hover {
-    box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.8); /* glowing White */
+    box-shadow: 0 0 20px 5px rgba(0, 193, 193, 0.8); /* glowing White */
     transform: scale(1.1); /* Slight zoom effect */
 }
+
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 28px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.social-btn i {
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+.social-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: all 0.4s ease;
+  z-index: 0;
+  opacity: 0;
+}
+
+.social-btn:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 20px 5px rgba(0, 193, 193, 0.8);
+}
+
+.social-btn:hover i {
+  transform: scale(1.1);
+}
+
+.social-btn:hover::before {
+  transform: translate(-50%, -50%) scale(1.5);
+  opacity: 1;
+  filter: blur(20px);
+}
+
+.facebook {
+  border-color: #3b5998;
+}
+
+.facebook::before {
+  background: #3b5998;
+  box-shadow: 0 0 15px #3b5998;
+}
+
+.linkedin {
+  border-color: #0077b5;
+}
+
+.linkedin::before {
+  background: #0077b5;
+  box-shadow: 0 0 15px #0077b5;
+}
+
+.instagram {
+  border-color: #e4405f;
+}
+
+.instagram::before {
+  background: radial-gradient(circle at 30% 30%, #feda75, #d62976, #4f5bd5);
+  box-shadow: 0 0 15px #d62976;
+}
+
+.twitter {
+  border-color: #1da1f2;
+}
+
+.twitter::before {
+  background: #1da1f2;
+  box-shadow: 0 0 15px #1da1f2;
+}
+
+.get-in-touch {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+.get-in-touch-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    margin-top: 20px;
+    border: 2px solid #00C1C1;
+    color: #00C1C1;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+  }
+
+  .get-in-touch-btn:hover {
+    background-color: #00C1C1;
+    color: #000;
+    border-color: transparent;
+box-shadow: 0 0 8px 2px rgba(0, 193, 193, 0.8);
+  }
+
+.scroll-down {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .scroll-text {
+	font-family:"Inter-SemiBold", "Inter", sans-serif;
+	
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    margin-bottom: 10px;
+    text-transform: uppercas;
+    letter-spacing: 0px;
+
+  }
+
+  .scroll-dot {
+    position: relative;
+    height: 30px;
+    margin: 0 auto;
+  }
+
+  .dot {
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #00C1C1;
+    position: absolute;
+    animation: moveUpDown 1.5s infinite ease-in-out;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Animation for the dot moving up and down */
+  @keyframes moveUpDown {
+    0% {
+      top: 0;
+    }
+    50% {
+      top: 10px;
+    }
+    100% {
+      top: 0;
+    }
+  }
