@@ -15,14 +15,45 @@
             });
         });
    
-        const comments = ["Innovate your dreams!", "Stay motivated!", "Think big, act bigger!", "Success starts with a step!"];
+        const textArray = ["website designer", "developer", "freelancer", "creative artist"];
         let index = 0;
+        let charIndex = 0;
+        let isDeleting = false;
         
-        function changeComment() {
-            document.querySelector('.dynamic-text').textContent = comments[index];
-            index = (index + 1) % comments.length;
-        }
-        
-        setInterval(changeComment, 2000);
-        changeComment();
+        function typeEffect() {
+            const textElement = document.getElementById("changingText");
+            let currentText = textArray[index];
 
+
+if (isDeleting) {
+                textElement.textContent = currentText.substring(0, charIndex--);
+            } else {
+                textElement.textContent = currentText.substring(0, charIndex++);
+            }
+
+            let speed = isDeleting ? 50 : 100;
+
+            if (!isDeleting && charIndex === currentText.length) {
+                speed = 2000; // Pause before deleting
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                index = (index + 1) % textArray.length; // Move to the next text
+                speed = 500; // Pause before typing new text
+            }
+
+            setTimeout(typeEffect, speed);
+        }
+
+        typeEffect(); // Start typing effect
+        
+
+const starCount = 100; // Number of stars
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.top = Math.random() * 100 + 'vh';
+                star.style.left = Math.random() * 100 + 'vw';
+                star.style.animationDuration = (Math.random() * 5 + 5) + 's';
+                document.querySelector('.stars').appendChild(star);
+            }
