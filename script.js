@@ -48,15 +48,6 @@ if (isDeleting) {
         typeEffect(); // Start typing effect
         
 
-const starCount = 100; // Number of stars
-            for (let i = 0; i < starCount; i++) {
-                const star = document.createElement('div');
-                star.className = 'star';
-                star.style.top = Math.random() * 100 + 'vh';
-                star.style.left = Math.random() * 100 + 'vw';
-                star.style.animationDuration = (Math.random() * 5 + 5) + 's';
-                document.querySelector('.stars').appendChild(star);
-            }
 // Function to check if element is in viewport
 function isInViewport(element) {
   const rect = element.getBoundingClientRect();
