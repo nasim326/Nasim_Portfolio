@@ -57,3 +57,24 @@ const starCount = 100; // Number of stars
                 star.style.animationDuration = (Math.random() * 5 + 5) + 's';
                 document.querySelector('.stars').appendChild(star);
             }
+// Function to check if element is in viewport
+function isInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+}
+
+// Function to add the 'show' class when in viewport
+function animateOnScroll() {
+  const elementsToAnimate = document.querySelectorAll('.animate-up, .animate-down');
+  elementsToAnimate.forEach(element => {
+    if (isInViewport(element)) {
+      element.classList.add('show');
+    }
+  });
+}
+
+// Trigger the animation on scroll and on page load
+window.addEventListener('scroll', animateOnScroll);
+window.addEventListener('load', animateOnScroll);
