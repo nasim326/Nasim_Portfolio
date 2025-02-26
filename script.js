@@ -69,3 +69,29 @@ function animateOnScroll() {
 // Trigger the animation on scroll and on page load
 window.addEventListener('scroll', animateOnScroll);
 window.addEventListener('load', animateOnScroll);
+function openWebsite(url) {
+  window.open(url, '_blank');
+}
+
+function expandCard(index) {
+    const cards = document.querySelectorAll('.service-card');
+    cards.forEach((card, i) => {
+        if (i === index) {
+            card.classList.add('active');
+	card.classList.remove('hidden');
+        } else {
+            card.classList.add('hidden');
+	card.classList.remove('active');
+        }
+    });
+    activeIndex = index;
+}
+
+function closeCard(event) {
+    event.stopPropagation();  // Prevent triggering expandCard
+    const cards = document.querySelectorAll('.service-card');
+    cards.forEach(card => {
+        card.classList.remove('active', 'hidden');
+    });
+    activeIndex = null;
+}
