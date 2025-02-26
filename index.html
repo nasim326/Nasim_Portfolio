@@ -17,7 +17,7 @@
     <header class="navbar">
      
 <div class="logo">
-  <span class="name nasim">Nasim</span>
+  <span class="name nasim">/n.</span>
   <span class="name sarwar">Sarwar</span>
 </div>
 
@@ -83,7 +83,9 @@
         </div>
       </div>
 </div>
-       <section class="about-section" id="about">
+<div>
+      </div>
+    <section class="about-section" id="about">
   <div class="container">
     <h2 class="about-heading animate-up">
       About<span class="highlight"> me</span>
@@ -94,11 +96,131 @@
     </p>
     <button class="about-btn animate-down">Learn More</button>
   </div>
+<div>
+      </div>
 </section>
-    <section id="services" class="section">Services Content</section>
-    <section id="portfolio" class="section">Portfolio Content</section>
+
+    <section id="services" class="services-section">
+    <h2 class="about-heading animate-up">
+      Our<span class="highlight"> Services</span>
+    </h2>
+
+    <p class="about-text animate-up">
+      I'm a passionate web developer specializing in creating responsive and dynamic websites. I love turning complex problems into simple and beautiful solutions.
+    </p>
+    <div class="services-container">
+        <div class="service-card" onclick="expandCard(0)">
+            <div class="service-content">
+                <h3>Front-End Development</h3>
+                <p>Building beautiful and responsive user interfaces.</p>
+            </div>
+            <div class="service-details">
+                <p>We specialize in creating engaging, high-performance UI designs using the latest front-end technologies like React, Vue, and Angular.</p>
+                <button class="close-btn" onclick="closeCard(event)">Close</button>
+            </div>
+        </div>
+        <div class="service-card" onclick="expandCard(1)">
+            <div class="service-content">
+                <h3>Back-End Development</h3>
+                <p>Robust server-side logic and database management.</p>
+            </div>
+            <div class="service-details">
+                <p>Our back-end solutions ensure security, scalability, and efficiency, using Node.js, Python, and PHP frameworks.</p>
+                <button class="close-btn" onclick="closeCard(event)">Close</button>
+            </div>
+        </div>
+        <div class="service-card" onclick="expandCard(2)">
+            <div class="service-content">
+                <h3>Full-Stack Solutions</h3>
+                <p>End-to-end web solutions from front to back.</p>
+            </div>
+            <div class="service-details">
+                <p>We deliver complete full-stack solutions with seamless integration between front-end and back-end technologies.</p>
+                <button class="close-btn" onclick="closeCard(event)">Close</button>
+            </div>
+        </div>
+    </div>
+</section>
+    <section id="portfolio" class="section">
+<h2 class="about-heading animate-up">
+      Web<span class="highlight"> Project</span>
+    </h2>
+
+    <p class="about-text animate-up">
+      I'm a passionate web developer specializing in creating responsive and dynamic websites. I love turning complex problems into simple and beautiful solutions.
+    </p>
+<div class="portfolio-cards">
+ <div class="card-container">
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="images/website1.jpeg" alt="Website 1">
+      </div>
+      <div class="flip-card-back">
+        <img src="images/website1.jpeg" alt="Website 1">
+        <h3>Website Title 1</h3>
+        <p>Short description of the website.</p>
+        <button onclick="openWebsite('https://example1.com')">Show Website</button>
+      </div>
+    </div>
+  </div>
+<h4 class="project-title">Project-1</h4>
+</div>
+<div class="card-container">
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="images/website2.png" alt="Website 2">
+      </div>
+      <div class="flip-card-back">
+        <img src="images/website2.png" alt="Website 2">
+        <h3>Website Title 2</h3>
+        <p>Short description of the website.</p>
+        <button onclick="openWebsite('https://nasim326.github.io/Copid-Project-1/')">Show Website</button>
+      </div>
+    </div>
+</div>
+<h4 class="project-title">Project-2</h4>
+  </div>
+
+<div class="card-container">
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="path/to/image3.jpg" alt="Website 3">
+      </div>
+      <div class="flip-card-back">
+        <img src="path/to/image3.jpg" alt="Website 3">
+        <h3>Website Title 3</h3>
+        <p>Short description of the website.</p>
+        <button onclick="openWebsite('https://example3.com')">Show Website</button>
+      </div>
+    </div>
+    </div>
+<h4 class="project-title">Project-3</h4>
+  </div>
+
+<div class="card-container">
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="path/to/image4.jpg" alt="Website 4">
+      </div>
+      <div class="flip-card-back">
+        <img src="path/to/image4.jpg" alt="Website 4">
+        <h3>Website Title 4</h3>
+        <p>Short description of the website.</p>
+        <button onclick="openWebsite('https://example4.com')">Show Website</button>
+      </div>
+    </div>
+  </div>
+<h4 class="project-title">Project-4</h4>
+</div>
+</div>
+</section>
     <section id="contact" class="section">Contact Content</section>
     
     <footer class="footer">© 2025 My Portfolio | Designed to match navbar</footer>
 </body>
 </html>
+
