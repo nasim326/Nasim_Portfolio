@@ -4,10 +4,16 @@
 	    padding: 0;
             box-sizing: border-box;
             font-family: 'Open Sans',sans-serif;
-            background: linear-gradient(90deg,
-             #052323 0%,
-            #031b1b 50%,
-          #111A20 100%
+            background: radial-gradient(circle at top left, rgba(0,255,157,.12), transparent 35%),
+        radial-gradient(circle at top right, rgba(0,170,255,.08), transparent 40%),
+        radial-gradient(circle at bottom, rgba(0,255,157,.06), transparent 45%),
+        linear-gradient(
+            135deg,
+            #020617 0%,
+            #07101F 25%,
+            #0A1428 55%,
+            #111827 100%
+
     );
     min-height: 100vh;  /* ensures the gradient covers the full viewport height */
 
@@ -42,6 +48,7 @@
 .nasim {
   color: white;
   font-family: 'Open Sans', sans-serif; /* Font for Nasim */
+font-weight: bold;
 }
 
 /* "Sarwar" Text Style */
@@ -137,20 +144,20 @@ margin: 0 auto;
         }
 	.its-text {
             
-color: White;        
+color:#28b68b;
+
+text-shadow:
+    0 0 3px rgba(40, 182, 139, 0.12),
+    0 0 8px rgba(40, 182, 139, 0.08);
 }
         
 	/* Text Style for "Nasim Sarwar" */
 .name-text {
-  color: transparent; /* Make the text color transparent to show the gradient */
-  background-image: linear-gradient(135deg, 
-                                    #1AA5F6, #4F8CFE, #786EFA, #F4B0FC, #F4B0FC); /* RGB colors */
-  background-size: 200% 100%; /* Make the gradient larger than the text */
-  background-position: left center; /* Start the gradient on the left */
-  -webkit-background-clip: text; /* Clip the background to the text */
-  background-clip: text; /* Clip the background to the text */
-  
-  animation: changeColor 4.5s linear infinite; /* Apply animation */
+    color: White;
+
+    text-shadow:
+        0 0 12px rgba(167,233,209,.10);
+
 }
 
 /* Keyframes for the gradient animation */
@@ -419,9 +426,11 @@ text-align: center;
 }
 
 .about-heading .highlight {
-  color: #2cc197;
-  text-shadow: 0 0 10px rgba(44, 193, 151, 0.5),
-               0 0 15px rgba(44, 193, 151, 0.4);
+  color:#28b68b;
+
+text-shadow:
+    0 0 3px rgba(40, 182, 139, 0.12),
+    0 0 8px rgba(40, 182, 139, 0.08);
 }
 
 .about-text {
@@ -450,8 +459,10 @@ text-align: center;
 }
 
 .about-btn:hover {
-  background: #2cc197;
-  color: #1a1a1a;
+  background-color: #2cc197;
+    color: #000;
+    border-color: transparent;
+box-shadow: 0 0 8px 2px rgba(44, 193, 151, 0.8);
 }
 
 
@@ -522,7 +533,7 @@ position: absolute;
 }
 
 .service-card h3 {
-    color: #007bff;
+    color: #ffffff;
     margin-bottom: 10px;
 }
 
