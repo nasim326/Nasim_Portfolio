@@ -730,7 +730,7 @@ box-shadow: 0 0 15px rgba(44, 193, 151, 0.5);
 .small-heading{
     display: inline-block;
     margin-top: 12px;
-    font-size: 0.6em;   /* 60% of the main heading */
+    font-size: 0.8em;   /* 60% of the main heading */
     font-weight: 500;
     color: #b8c2d6;
     line-height: 1.3;
