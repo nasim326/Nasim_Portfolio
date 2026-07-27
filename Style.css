@@ -13,8 +13,8 @@
             #07101F 25%,
             #0A1428 55%,
             #111827 100%
-
     );
+		overflow-x: hidden;
     min-height: 100vh;  /* ensures the gradient covers the full viewport height */
 
 }
